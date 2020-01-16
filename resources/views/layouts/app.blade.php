@@ -24,7 +24,7 @@
         <nav class="navbar navbar-expand-md navbar-light bg-white shadow-sm">
             <div class="container">
                 <a class="navbar-brand d-flex" href="{{ url('/') }}">
-                    <div><img src="https://www.lendio.com/wp-content/uploads/2019/08/Wordpress-Lendio-Logo_black-800x800.jpg" style="height: 20px; border-right: 1px solid #333; border-radius: 50%;" alt=""/></div>
+                    <div><img src="/images/lendioLogo.png" style="height: 20px; border-right: 1px solid #333; padding-right: 10px;" alt=""/></div>
                     <div class="pl-2 pt-.5">LendioGram</div>
                 </a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="{{ __('Toggle navigation') }}">

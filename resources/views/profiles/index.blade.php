@@ -9,10 +9,11 @@
         <div class="col-9 pt-5">
             <div class="d-flex justify-content-between align-items-baseline">
                 <h1>{{$user->username}}</h1>
-                <a href="#">Add New Post</a>
+                <a href="/p/create">Add New Post</a>
             </div>
+                <a href="/profile/{{ $user->id }}/edit">Edit Profile</a>
             <div class="d-flex">
-                <div class="pr-5"><strong>153 </strong>posts</div>
+                <div class="pr-5"><strong>{{ $user->posts->count() }} </strong>posts</div>
                 <div class="pr-5"><strong>23k </strong>followers</div>
                 <div class="pr-5"><strong>212 </strong>following</div>
             </div>
@@ -23,15 +24,13 @@
     </div>
 
     <div class="row">
-        <div class="col-4">
-            <img src="https://wallpapercave.com/wp/wp2446261.jpg" alt="" class="w-100 h-100">
+    @foreach($user->posts as $post)
+        <div class="col-4 pb-4">
+            <a href="/p/{{ $post->id }} ">
+                <img src="/storage/{{ $post->image }}" alt="" class="w-100 h-100">
+            </a>
         </div>
-        <div class="col-4">
-            <img src="https://wallpaperaccess.com/full/1104816.jpg" alt="" class="w-100 h-100">
-        </div>
-        <div class="col-4">
-            <img src="https://wallpaperaccess.com/full/732213.jpg" alt="" class="w-100 h-100">
-        </div>
+    @endforeach
     </div>
 </div>
 @endsection
